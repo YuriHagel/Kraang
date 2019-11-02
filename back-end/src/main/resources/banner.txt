@@ -1,0 +1,7 @@
+${AnsiColor.CYAN} __  __    ______    ______    ______    __   __    ______
+${AnsiColor.CYAN}/\ \/ /   /\  == \  /\  __ \  /\  __ \  /\ "-.\ \  /\  ___\
+${AnsiColor.CYAN}\ \  _"-. \ \  __<  \ \  __ \ \ \  __ \ \ \ \-.  \ \ \ \__ \
+${AnsiColor.CYAN} \ \_\ \_\ \ \_\ \_\ \ \_\ \_\ \ \_\ \_\ \ \_\\"\_\ \ \_____\
+${AnsiColor.CYAN}  \/_/\/_/  \/_/ /_/  \/_/\/_/  \/_/\/_/  \/_/ \/_/  \/_____/
+
+${AnsiColor.BRIGHT_RED}:: Spring Boot ::        ${spring-boot.formatted-version}

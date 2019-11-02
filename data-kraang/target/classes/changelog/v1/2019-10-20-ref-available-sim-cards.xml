@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.5.xsd">
+
+    <changeSet id="2019-08-22-ref-available-sim-cards" author="y.hagel">
+        <dropTable tableName="simcards_lock"/>
+        <createTable tableName="simcards_lock" tablespace="kraang_data">
+            <column name="id_simcard_inst" type="bigint">
+                <constraints primaryKey="true"
+                             primaryKeyTablespace="kraang_indx"
+                             primaryKeyName="pk_simcards_lock"/>
+            </column>
+            <column name="imsi" type="varchar(20)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="remove_lock" type="timestamp" remarks="Время снятия блокировки">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+</databaseChangeLog>

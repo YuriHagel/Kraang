@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.5.xsd">
+
+    <changeSet id="2019-07-16-simcards_lock" author="y.hagel">
+        <createTable tableName="simcards_lock">
+            <column name="imsi" type="varchar(20)">
+                <constraints primaryKey="true"
+                             primaryKeyTablespace="kraang_indx"
+                             primaryKeyName="pk_lock_simcards"/>
+            </column>
+            <column name="remove_lock"
+                    type="timestamp"
+                    remarks="Время снятия блокировки">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+
+    <changeSet id="2019-07-16-identifiers_lock" author="y.hagel">
+        <createTable tableName="identifiers_lock">
+            <column name="msisdn"
+                    type="varchar(128)">
+                <constraints primaryKey="true"
+                             primaryKeyTablespace="kraang_indx"
+                             primaryKeyName="pk_identifiers_lock"/>
+            </column>
+            <column name="remove_lock"
+                    type="timestamp"
+                    remarks="Время снятия блокировки">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+</databaseChangeLog>
