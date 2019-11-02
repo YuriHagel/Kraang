@@ -8,9 +8,9 @@ import org.springframework.data.repository.query.Param;
 import java.time.LocalDateTime;
 
 public interface IdentifierRepository extends JpaRepository<IdentifierEntity, Long> {
-  @Query("select s.identifier " +
-          " from ServiceIdentifierEntity s" +
-          " where s.deleted = false" +
+  @Query("select s.identifier "  +
+          " from ServiceIdentifierEntity s"
+          + " where s.deleted = false" +
           "   and s.identifier.deleted = false" +
           "   and s.start <= :dtStart" +
           "   and s.stop   > :dtStop" +
